@@ -6,9 +6,9 @@
   <title>Halaman Utama</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
+  <style>
     /* Gaya untuk gambar personel */
     .personel-img {
       max-width: 80%;
@@ -16,10 +16,10 @@
       border-radius: 50%;
       transition: transform 0.3s ease-in-out;
     }
-          .personel-img:hover {
+    .personel-img:hover {
       transform: scale(1.1);
     }
-/* Gaya untuk tombol kembali */
+    /* Gaya untuk tombol kembali */
     .back-btn {
       transition: transform 0.3s ease-in-out;
     }
@@ -31,41 +31,52 @@
     width: 100%;
     margin-top: 10px;
   }
-        /* Gaya untuk panel kontrol */
+  
+  /* Gaya untuk panel kontrol */
   .custom-audio::-webkit-media-controls-panel {
     background-color: #f8f9fa; /* Warna latar belakang */
     border-radius: 10px; /* Sudut border */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan */
     padding: 10px; /* Ruang dalam */
   }
-      /* Gaya untuk tombol putar */
+  
+  /* Gaya untuk tombol putar */
   .custom-audio::-webkit-media-controls-play-button {
     background-color: #007bff; /* Warna latar belakang */
     border-radius: 50%; /* Bentuk lingkaran */
   }
-/* Hover state untuk tombol putar */
+  
+  /* Hover state untuk tombol putar */
   .custom-audio::-webkit-media-controls-play-button:hover {
     background-color: #0056b3; /* Warna latar belakang saat dihover */
   }
-        /* Gaya untuk teks waktu */
+  
+  /* Gaya untuk teks waktu */
   .custom-audio::-webkit-media-controls-current-time-display,
   .custom-audio::-webkit-media-controls-time-remaining-display {
     color: #000; /* Warna teks */
   }
-        /* Gaya untuk slider volume */
+  
+  /* Gaya untuk slider volume */
   .custom-audio::-webkit-media-controls-volume-slider {
     background-color: #6c757d; /* Warna latar belakang */
   }
-        /* Gaya untuk thumb slider volume */
+  
+  /* Gaya untuk thumb slider volume */
   .custom-audio::-webkit-media-controls-volume-slider::-webkit-slider-thumb {
     background-color: #007bff; /* Warna thumb */
   }
-        </style>
+
+  
+  
+
+  </style>
 </head>
 <body>
   <div class="container">
     <h1 class="mt-5 mb-4 text-center">Media Lagu</h1>
-        <div class="container">
+    
+    <div class="container">
         <div class="row">
           <!-- Album Cover -->
           <div class="col-md-6">
@@ -74,19 +85,19 @@
               <audio controls class="custom-audio">
                 <source src="akumilikmu.mp3" type="audio/wav">
                 Your browser does not support the audio element.
-              </audio>
-              </div>
+              </audio>              
+            </div>
           </div>
           <!-- Deskripsi Lagu, Personel, Musisi Pendukung -->
           <div class="col-md-6">
             <div class="accordion accordion-content" id="accordionDetails">
-            <!-- Deskripsi Lagu -->
+              <!-- Deskripsi Lagu -->
               <div class="accordion-item">
                 <h2 class="accordion-header" id="deskripsiHeading">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#deskripsiCollapse" aria-expanded="true" aria-controls="deskripsiCollapse">
                     Deskripsi Lagu
                   </button>
-                  </h2>
+                </h2>
                 <div id="deskripsiCollapse" class="accordion-collapse collapse show" aria-labelledby="deskripsiHeading">
                   <div class="accordion-body">
                     <p>"Aku Milikmu" adalah salah satu lagu dari band legendaris Indonesia, Dewa 19. Lagu ini dirilis pada tahun 1999 sebagai bagian dari album studio keenam mereka yang berjudul "Bintang Lima". Lagu ini dikenal dengan melodi yang indah dan lirik yang menyentuh, menceritakan tentang perasaan seseorang yang begitu mencintai dan merindukan pasangannya. Dengan vokal yang kuat dan melodi yang mendayu, lagu ini telah menjadi salah satu lagu cinta paling ikonik dalam sejarah musik Indonesia.</p>
@@ -108,7 +119,7 @@
                       <li><strong>Andra Ramadhan</strong>: Gitar</li>
                       <li><strong>Ari Lasso</strong>: Vokal Utama</li>
                     </ul>
-                    </div>
+                  </div>
                 </div>
               </div>
               <!-- Musisi Pendukung -->
@@ -118,7 +129,7 @@
                     Musisi Pendukung
                   </button>
                 </h2>
-                div id="musisiPendukungCollapse" class="accordion-collapse collapse show" aria-labelledby="musisiPendukungHeading">
+                <div id="musisiPendukungCollapse" class="accordion-collapse collapse show" aria-labelledby="musisiPendukungHeading">
                   <div class="accordion-body">
                     <ul>
                       <li><strong>Maia Estianty</strong>: Vokal Latar</li>
@@ -132,6 +143,11 @@
           </div>
         </div>
       </div>
+      
+      
+      
+      
+    
 <!-- Video Section -->
 <section class="mb-5">
     <h2 class="text-center mb-4">Video</h2>
@@ -146,7 +162,8 @@
           <figcaption class="text-center">Video Klip</figcaption>
         </figure>
       </div>
-            <!-- Video Live -->
+  
+      <!-- Video Live -->
       <div class="col-md-6 mb-4">
         <figure>
           <div class="ratio ratio-16x9">
@@ -157,6 +174,8 @@
       </div>
     </div>
   </section>
+  
+  
   <div class="container">
     <div class="row">
       <!-- Deskripsi Konser dan Foto Dewa 19 -->
@@ -226,23 +245,12 @@
     </div>
     <div class="container">
         <!-- Konten lainnya di sini -->
-        
         <!-- Tombol Daftar Sekarang -->
         <div class="text-center mt-3 mb-5">
           <button class="btn btn-primary" onclick="window.location.href='page2.html'">Daftar Sekarang</button>
         </div>
       </div>
-      
-  
-  
-  
-  
-  
-
-
-
   <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
