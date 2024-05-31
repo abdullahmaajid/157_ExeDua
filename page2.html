@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman 2</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Gradient latar belakang */
+    body {
+        background: linear-gradient(135deg, #beb7c9, #3056ff);
+    }
+    /* Gaya untuk tombol kembali */
+  .back-btn {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white; /* Membuat teks menjadi putih */
+    font-weight: bold; /* Membuat teks menjadi tebal (bold) */
+    backdrop-filter: blur(10px); /* Efek kaca terburam */
+    -webkit-backdrop-filter: blur(10px); /* Efek kaca terburam untuk browser berbasis WebKit (misalnya Safari) */
+  }
+
+  .back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 rounded-3">
+        <h1 class="mt-5 mb-4 text-center">Form Input</h1>
+        <!-- Form -->
+        <form id="myForm">
+          <div class="mb-3">
+            <label for="textField" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="textField">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDataList" class="form-label">Pilih Tempat Konser</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+            <datalist id="datalistOptions">
+              <option value="Jakarta">
+              <option value="Jogja">
+              <option value="Bandung">
+              <option value="Surabaya">
+              <option value="Semarang">
+            </datalist>
+          </div>
+          <div class="mb-3">
+            <label for="dateField" class="form-label">Pilih Tanggal</label>
+            <input type="date" class="form-control" id="dateField">
+          </div>
+          <div class="mb-3">
+            <label for="selectField" class="form-label">Pilih Tiket</label>
+            <select class="form-control" id="selectField">
+              <option value="option1">Festival</option>
+              <option value="option2">VIP</option>
+              <option value="option3">VVIP</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Pilih Metode Pembayaran</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioOptions" id="radioOption1" value="option1">
+              <label class="form-check-label" for="radioOption1">BRIVA</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioOptions" id="radioOption2" value="option2">
+              <label class="form-check-label" for="radioOption2">Shoope Pay</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="textareaField" class="form-label">Isi Alamat Lengkap</label>
+            <textarea class="form-control" id="textareaField" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Upload Bukti Pembayaran</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <!-- Button Submit -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+        
+        <!-- Tombol Kembali ke Halaman Utama -->
+        <div class="text-center mt-3">
+          <a href="index.html" class="btn btn-secondary back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS dan jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Mengumpulkan nilai dari input
+      var nama = document.getElementById('textField').value;
+      var tempatKonser = document.getElementById('exampleDataList').value;
+      var tanggal = document.getElementById('dateField').value;
+      var tiket = document.getElementById('selectField').value;
+      var metodePembayaran = document.querySelector('input[name="radioOptions"]:checked').value;
+      var alamat = document.getElementById('textareaField').value;
+      var buktiPembayaran = document.getElementById('formFile').value; // Ingat bahwa Anda perlu logika khusus untuk menangani file input
+  
+      // Menampilkan nilai input dalam alert
+      var message = "Nama: " + nama + "\n";
+      message += "Tempat Konser: " + tempatKonser + "\n";
+      message += "Tanggal: " + tanggal + "\n";
+      message += "Tiket: " + tiket + "\n";
+      message += "Metode Pembayaran: " + metodePembayaran + "\n";
+      message += "Alamat: " + alamat + "\n";
+      message += "Bukti Pembayaran: " + buktiPembayaran;
+  
+      // Menampilkan alert dengan tombol konfirmasi dan batal
+      var confirmation = confirm(message + "\n\nApakah Anda ingin melanjutkan pendaftaran?");
+      if (confirmation) {
+        // Lakukan tindakan ketika dikonfirmasi
+        alert('Pendaftaran berhasil dikonfirmasi!');
+      } else {
+        // Lakukan tindakan ketika dibatalkan
+        alert('Pendaftaran dibatalkan.');
+      }
+    });
+  </script>
+</body>
+</html>
